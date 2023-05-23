@@ -1,6 +1,5 @@
 package Entidades;
 
-
 import java.util.HashSet;
 
 public class Voto {
@@ -33,5 +32,10 @@ public class Voto {
         this.votantes = votantes;
     }
 
-   
+    @Override
+    public String toString() {
+        return "Voto{" + "alumno=" + alumno + ", votantes=" + votantes + '}';
+    }
+
+    
 }

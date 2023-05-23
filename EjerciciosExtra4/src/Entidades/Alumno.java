@@ -1,5 +1,7 @@
 package Entidades;
 
+import java.util.Comparator;
+
 public class Alumno {
 
     private String nombre;
@@ -41,5 +43,10 @@ public class Alumno {
         this.votos = votos;
     }
 
-
+    public static Comparator<Alumno> compararVotos = new Comparator<Alumno>() {
+        @Override
+        public int compare(Alumno a1, Alumno a2) {
+            return Integer.compare(a2.getVotos(), a1.getVotos());
+        }
+    };
 }
